@@ -64,33 +64,35 @@ function rollClick() {
 }
 function holdClick() {
     if(notBusy){
-        if (turn) {
-            document.getElementById('p1Score').innerText = eval(document.getElementById('p1RScore').innerText) + eval(document.getElementById('p1Score').innerText);
-            document.getElementById('p1RScore').innerText = "0";
-            turn = false;
-            document.getElementById('leftPlayer').style.backgroundColor = "aliceblue";
-            document.getElementById('rightPlayer').style.backgroundColor = "#dddddd";
-            if (eval(document.getElementById('p1Score').innerText) >= 100) {
-                document.getElementById('p1Score').innerText = "Win";
-                //unable buttons
-                document.getElementById('roll').getElementsByTagName('p')[0].onclick = null;
-                document.getElementById('hold').getElementsByTagName('p')[0].onclick = null;
-            }
-        } else {
-            document.getElementById('p2Score').innerText = eval(document.getElementById('p2RScore').innerText) + eval(document.getElementById('p2Score').innerText);
-            document.getElementById('p2RScore').innerText = "0";
-            turn = true;
-            document.getElementById('leftPlayer').style.backgroundColor = "#dddddd";
-            document.getElementById('rightPlayer').style.backgroundColor = "aliceblue";
-            if (eval(document.getElementById('p2Score').innerText) >= 100) {
-                document.getElementById('p2Score').innerText = "Win";
-                //unable buttons
-                document.getElementById('roll').getElementsByTagName('p')[0].onclick = function () {
-                    win();
-                };
-                document.getElementById('hold').getElementsByTagName('p')[0].onclick = function () {
-                    win();
-                };
+        if(eval(document.getElementById('p1RScore').innerText)!==0 || eval(document.getElementById('p2RScore').innerText)!==0){
+            if (turn) {
+                document.getElementById('p1Score').innerText = eval(document.getElementById('p1RScore').innerText) + eval(document.getElementById('p1Score').innerText);
+                document.getElementById('p1RScore').innerText = "0";
+                turn = false;
+                document.getElementById('leftPlayer').style.backgroundColor = "aliceblue";
+                document.getElementById('rightPlayer').style.backgroundColor = "#dddddd";
+                if (eval(document.getElementById('p1Score').innerText) >= 100) {
+                    document.getElementById('p1Score').innerText = "Win";
+                    //unable buttons
+                    document.getElementById('roll').getElementsByTagName('p')[0].onclick = null;
+                    document.getElementById('hold').getElementsByTagName('p')[0].onclick = null;
+                }
+            } else {
+                document.getElementById('p2Score').innerText = eval(document.getElementById('p2RScore').innerText) + eval(document.getElementById('p2Score').innerText);
+                document.getElementById('p2RScore').innerText = "0";
+                turn = true;
+                document.getElementById('leftPlayer').style.backgroundColor = "#dddddd";
+                document.getElementById('rightPlayer').style.backgroundColor = "aliceblue";
+                if (eval(document.getElementById('p2Score').innerText) >= 100) {
+                    document.getElementById('p2Score').innerText = "Win";
+                    //unable buttons
+                    document.getElementById('roll').getElementsByTagName('p')[0].onclick = function () {
+                        win();
+                    };
+                    document.getElementById('hold').getElementsByTagName('p')[0].onclick = function () {
+                        win();
+                    };
+                }
             }
         }
     }
