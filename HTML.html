@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Let's Play</title>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Black+Ops+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link rel="shortcut icon" href="icon.jpg" />
+    <link rel="stylesheet" href="CSS.css">
+    <script src="Script.js"></script>
+</head>
+<body onload="pageLoad()">
+    <img id="background" src="background.jpg">
+    <div id="GameFrame">
+        <div id="leftPlayer">
+            <p class="globalScore" id="p1Score">0</p>
+            <p class="num">1</p>
+            <div class="roundBox">
+                <p class="roundScore" id="p1RScore">0</p>
+            </div>
+        </div>
+        <div id="rightPlayer">
+            <p class="globalScore" id="p2Score">0</p>
+            <p class="num">2</p>
+            <div class="roundBox">
+                <p class="roundScore" id="p2RScore">0</p>
+            </div>
+        </div>
+        <div id="share">
+            <div id="new">
+                <p onclick="newClick()">NEW GAME</p>
+            </div>
+            <img src="1.png" id="dice">
+            <div id="roll">
+                <p onclick="rollClick()">ROLL DICE</p>
+            </div>
+            <div id="hold">
+                <p onclick="holdClick()">HOLD</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,107 @@
+#background{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: -1;
+    left: 0;
+    top: 0;
+}
+#GameFrame{
+    text-align: center;
+    width: 800px;
+    height: 550px;
+    position: relative;
+    background-color: aliceblue;
+    margin-left: auto;
+    margin-right: auto;
+    top: 105px;
+    box-shadow: 3px 3px 6px black;
+}
+#leftPlayer{
+    width: 400px;
+    height: 550px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+}
+#rightPlayer{
+    width: 400px;
+    height: 550px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1;
+}
+#share{
+    font-size: 23px;
+    font-family: 'PT Sans', sans-serif;
+    width: 200px;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #777777;
+}
+#new{
+    width: 100%;
+    position: absolute;
+    top: 40px;
+}
+#roll{
+    width: 100%;
+    position: absolute;
+    top: 350px;
+}
+#hold{
+    width: 100%;
+    position: absolute;
+    top: 400px;
+}
+#share p:hover{
+    font-size: 24px;
+    color: black;
+    cursor: pointer;
+}
+.num{
+    opacity: 0.04;
+    font-size: 260px;
+    font-family: 'Black Ops One', cursive;
+    position: absolute;
+    left: 130px;
+    top: -130px;
+}
+.roundBox{
+    background-color: #e81c27;;
+    width: 130px;
+    height: 90px;
+    position: absolute;
+    box-shadow: 4px  4px 15px black;
+    left: 135px;
+    top: 370px;
+}
+#dice{
+    width: 90px;
+    height: 90px;
+    position: relative;
+    top: 170px;
+    display: none;
+}
+.globalScore{
+    width: 100px;
+    text-align: center;
+    text-align-all: center;
+    font-size: 70px;
+    font-family: 'Lato', sans-serif;
+    position: absolute;
+    left: 160px;
+    top: 50px;
+    color: #e81c27;
+}
+.roundScore{
+    text-align: center;
+    color: White;
+    font-size: 25px;
+}
